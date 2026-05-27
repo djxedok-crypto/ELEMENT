@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELEMENT KIDS - Commercial Proposal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* ==========================================
+           1. ОСНОВНЫЕ НАСТРОЙКИ СТИЛЕЙ (RESET & SETUP)
+           ========================================== */
+        :root {
+            --blue: #3ABEF9;
+            --pink: #FF8FBD;
+            --green: #A7D397;
+            --orange: #F99417;
+            --black: #000000;
+            --gray-light: #F8F9FA;
+            --padding-vertical: 5%;   
+            --padding-horizontal: 6%; 
+        }
+
+        * { box-sizing: border-box; }
+        body { background-color: #f0f2f5; margin: 0; padding: 20px 0; display: grid; place-items: center; min-height: 100vh; gap: 40px; }
+
+        /* Контейнер слайда 16:9 */
+        .slide {
+            width: 1280px;
+            height: 720px;
+            background-color: #ffffff;
+            color: var(--black);
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            padding: var(--padding-vertical) var(--padding-horizontal);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+        }
+
+        /* ==========================================
+           2. СТРУКТУРНЫЕ КЛАССЫ ДЛЯ ИЗОБРАЖЕНИЙ (VS CODE)
+           ========================================== */
+        .img-logo-main { width: 450px; margin-bottom: 30px; z-index: 2; }
+        .img-logo-corner { position: absolute; top: 5%; right: 6%; width: 120px; z-index: 10; }
+        
+        .slide-bg-image { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; filter: brightness(0.75); }
+        .img-block { width: 100%; height: 100%; object-fit: cover; border-radius: 25px; }
+
+        /* ==========================================
+           3. ТИПОГРАФИКА И ЭЛЕМЕНТЫ ИНТЕРФЕЙСА
+           ========================================== */
+        h1, h2, h3 { font-weight: 700; margin: 0; text-transform: uppercase; }
+        .slide-title { font-size: 42px; margin-bottom: 35px; border-left: 8px solid var(--orange); padding-left: 20px; letter-spacing: 1px; }
+        p, li { font-weight: 500; line-height: 1.5; font-size: 18px; color: #333; }
+        
+        .content-container { flex-grow: 1; display: flex; flex-direction: column; justify-content: center; width: 100%; position: relative; }
+        
+        /* Сетки карточек */
+        .grid-4-col { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; width: 100%; }
+        .grid-2-col { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; width: 100%; align-items: center; }
+        
+        .card-premium { background: var(--gray-light); border-radius: 25px; padding: 25px; border: 1px solid #eee; display: flex; flex-direction: column; gap: 10px; }
+        .card-icon { font-size: 32px; color: var(--blue); margin-bottom: 5px; }
+
+        /* Списки и Особенности */
+        .feature-tag { background: #fff; padding: 6px 15px; border-radius: 50px; font-size: 14px; font-weight: 700; display: inline-block; margin-top: 10px; border: 1px solid #ddd; }
+        .bullet-list { list-style: none; padding: 0; margin: 0; }
+        .bullet-list li { margin-bottom: 12px; display: flex; align-items: center; gap: 15px; }
+        .bullet-list li i { color: var(--green); font-size: 20px; }
+
+        /* Таблицы цен */
+        .table-wrapper { width: 100%; overflow: hidden; border-radius: 20px; border: 1px solid #ddd; }
+        .table-wrapper.scrollable { height: 440px; overflow-y: auto; }
+        table { width: 100%; border-collapse: collapse; font-family: 'Montserrat', sans-serif; }
+        th { background: #f8f9fa; border-bottom: 3px solid var(--orange); padding: 14px; font-size: 14px; font-weight: 700; text-align: center; position: sticky; top: 0; z-index: 5; }
+        td { padding: 10px; border: 1px solid #eee; text-align: center; font-size: 13px; font-weight: 500; }
+        td:first-child { text-align: left; font-weight: 700; background: #fafafa; padding-left: 25px; position: sticky; left: 0; }
+        .table-section-title { background: #f1f3f5; font-weight: 700; color: var(--orange); letter-spacing: 1px; }
+
+    </style>
+</head>
+<body>
+
+    <div class="slide" style="padding: 0; justify-content: center; align-items: center;">
+        <img src="img/bg_title.jpg" class="slide-bg-image" alt="Фон">
+        <img src="img/logo.png" class="img-logo-main" alt="ELEMENT KIDS">
+        <div style="z-index: 2; color: #fff; text-align: center;">
+            <div style="font-size: 22px; letter-spacing: 6px; font-weight: 700; background: rgba(0,0,0,0.4); padding: 12px 35px; border-radius: 50px;">
+                ТИМБИЛДИНГ • МАСТЕР-КЛАССЫ • ДЕТСКИЕ ПРОГРАММЫ
+            </div>
+        </div>
+    </div>
+
+
+    <div class="slide">
+        <img src="img/logo.png" class="img-logo-corner" alt="Logo">
+        <h2 class="slide-title">О компании</h2>
+        <div class="content-container">
+            <div class="grid-4-col">
+                <div class="card-premium" style="border-top: 5px solid var(--blue);">
+                    <div class="card-icon"><i class="fa-solid fa-star"></i></div>
+                    <h3>13+ ЛЕТ ОПЫТА</h3>
+                    <p>Эксперты в сфере премиальных детских ивентов.</p>
+                </div>
+                <div class="card-premium" style="border-top: 5px solid var(--pink);">
+                    <div class="card-icon"><i class="fa-solid fa-users"></i></div>
+                    <h3>40 000+ УЧАСТНИКОВ</h3>
+                    <p>Подарили счастливое детство тысячам ребят.</p>
+                </div>
+                <div class="card-premium" style="border-top: 5px solid var(--green);">
+                    <div class="card-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                    <h3>364 ДНЯ В ГОДУ</h3>
+                    <p>Работаем ежедневно, создавая праздники без пауз.</p>
+                </div>
+                <div class="card-premium" style="border-top: 5px solid var(--orange);">
+                    <div class="card-icon"><i class="fa-solid fa-people-group"></i></div>
+                    <h3>25+ ПРОФИ</h3>
+                    <p>Большая команда влюбленных в свое дело аниматоров.</p>
+                </div>
+            </div>
+            <div style="margin-top: 35px; height: 240px;">
+                <img src="img/about.jpg" class="img-block" alt="О нас">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="slide">
+        <img src="img/logo.png" class="img-logo-corner" alt="Logo">
+        <h2 class="slide-title">Почему выбирают нас</h2>
+        <div class="content-container">
+            <div class="grid-2-col" style="grid-template-columns: 1.2fr 0.8fr;">
+                <ul class="bullet-list">
+                    <li><i class="fa-solid fa-circle-check"></i> <p><b>Командный дух:</b> Сплачиваем класс, развивая лидерские качества.</p></li>
+                    <li><i class="fa-solid fa-circle-check"></i> <p><b>Абсолютное вовлечение:</b> Ни один ребенок не останется в стороне.</p></li>
+                    <li><i class="fa-solid fa-circle-check"></i> <p><b>Развитие мышления:</b> Интеллектуальные задачи в игровой форме.</p></li>
+                    <li><i class="fa-solid fa-circle-check"></i> <p><b>Незабываемые эмоции:</b> Уникальный реквизит и яркие финалы.</p></li>
+                    <li><i class="fa-solid fa-circle-check"></i> <p><b>Безопасность:</b> Тщательный контроль за каждым этапом игры.</p></li>
+                </ul>
+                <div style="background: var(--gray-light); padding: 40px; border-radius: 30px; border: 1px dashed var(--orange); text-align: center;">
+                    <i class="fa-solid fa-heart" style="font-size: 50px; color: var(--pink); margin-bottom: 15px;"></i>
+                    <h3 style="font-size: 22px; margin-bottom: 10px;">ELEMENT KIDS</h3>
+                    <p style="font-size: 16px;">Мы делаем события, которые дети вспоминают весь год!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="slide">
+        <img src="img/logo.png" class="img-logo-corner" alt="Logo">
+        <h2 class="slide-title">Программа Майнкрафт</h2>
+        <div class="content-container">
+            <div class="grid-2-col" style="grid-template-columns: 1.1fr 0.9fr;">
+                <div>
+                    <h3 style="color: var(--green); font-size: 28px; margin-bottom: 15px;">Погружение в кубическую реальность</h3>
+                    <p style="margin-bottom: 20px;">Легендарная игра выходит в оффлайн! Дети попадают в живой мир Minecraft, где им предстоит объединиться в команды ради выживания, крафта и великих построек.</p>
+                    <ul class="bullet-list">
+                        <li><i class="fa-solid fa-cube"></i> <p>Реальный крафтинг объектов и сбор ресурсов.</p></li>
+                        <li><i class="fa-solid fa-shield-halved"></i> <p>Командная защита базы от ночных мобов.</p></li>
+                        <li><i class="fa-solid fa-trophy"></i> <p>Финальная битва и распределение артефактов.</p></li>
+                    </ul>
+                    <div class="feature-tag" style="background: #f0fdf4; color: #16a34a; border-color: #bbf7d0;">🔥 Хит сезона 2026</div>
+                </div>
+                <div style="height: 420px;">
+                    <img src="img/minecraft.jpg" class="img-block" alt="Minecraft">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="slide">
+        <img src="img/logo.png" class="img-logo-corner" alt="Logo">
+        <h2 class="slide-title">Мини-Тимбилдинги</h2>
+        <div class="content-container">
+            <div class="grid-2-col">
+                <div class="card-premium" style="background: #fff; padding: 30px; height: 430px; justify-content: space-between;">
+                    <div>
+                        <h3 style="color: var(--orange); font-size: 24px; margin-bottom: 10px;">Эстафетный тимбилдинг</h3>
+                        <p style="font-size: 16px;">Динамичный формат, построенный на скорости, ловкости и взаимной поддержке. Идеально подходит для выплеска энергии и поднятия командного духа.</p>
+                        <div class="feature-tag" style="color: var(--orange); background: #fff7ed;">⚡ Особенность: Эксклюзивный мягкий VIP-реквизит</div>
+                    </div>
+                    <div style="height: 180px; margin-top: 15px;">
+                        <img src="img/relay.jpg" class="img-block" alt="Эстафеты">
+                    </div>
+                </div>
+
+                <div class="card-premium" style="background: #fff; padding: 30px; height: 430px; justify-content: space-between;">
+                    <div>
+                        <h3 style="color: var(--pink); font-size: 24px; margin-bottom: 10px;">Игра в Кальмара</h3>
+                        <p style="font-size: 16px;">Адаптированная, абсолютно безопасная игра по мотивам популярного сериала. Упор делается на логику, хладнокровие, стратегию и доверие партнеру по команде.</p>
+                        <div class="feature-tag" style="color: var(--pink); background: #fdf2f8;">🎯 Особенность: Испытания на психологическое сплочение</div>
+                    </div>
+                    <div style="height: 180px; margin-top: 15px;">
+                        <img src="img/squid.jpg" class="img-block" alt="Игра в Кальмара">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="slide">
+        <img src="img/logo.png" class="img-logo-corner" alt="Logo">
+        <h2 class="slide-title">Крафтовые игры</h2>
+        <div class="content-container">
+            <div class="grid-2-col" style="grid-template-columns: 0.8fr 1.2fr;">
+                <div style="height: 420px;">
+                    <img src="img/craft.jpg" class="img-block" alt="Крафт">
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div class="card-premium" style="padding: 15px 20px; font-weight: 700;">• Эластик</div>
+                    <div class="card-premium" style="padding: 15px 20px; font-weight: 700;">• Балансир</div>
+                    <div class="card-premium" style="padding: 15px 20px; font-weight: 700;">• Токатронь</div>
+                    <div class="card-premium" style="padding: 15px 20px; font-weight: 700;">• Башня баланса</div>
+                    <div class="card-premium" style="padding: 15px 20px; font-weight: 700;">• Флибл</div>
+                    <div class="card-premium" style="padding: 15px 20px; font-weight: 700;">• Роузфор</div>
+                    <div class="card-premium" style="padding: 15px 20px; font-weight: 700;">• Корнхол</div>
+                    <div class="card-premium" style="padding: 15px 20px; font-weight: 700;">• Каланча</div> 
+                    <div class="card-premium" style="padding: 15px 20px; font-weight: 700;">• Пикселмон</div>
+                    <div class="card-premium" style="padding: 15px 20px; font-weight: 700;">• Вудрикс</div> 
+                    <div class="card-premium" style="padding: 15px 20px; font-weight: 700;">• Рингос</div>
+                    <div class="card-premium" style="padding: 15px 20px; font-weight: 700;">• Крестики - Нолики</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="slide">
+        <img src="img/logo.png" class="img-logo-corner" alt="Logo">
+        <h2 class="slide-title">Творческие Мастер-Классы</h2>
+        <div class="content-container">
+            <div class="grid-2-col" style="grid-template-columns: 1.4fr 0.6fr; gap: 25px;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; row-gap: 14px; column-gap: 20px; background: var(--gray-light); padding: 25px; border-radius: 25px;">
+                    <div><b>🎨 Слайм</b> — создание уникального лизуна</div>
+                    <div><b>📐 Оригами</b> — японское искусство бумаги</div>
+                    <div><b>🧸 Из фетра</b> — пошив мягких сувениров</div>
+                    <div><b>🔮 Лава лампа</b> — завораживающий хим. опыт</div>
+                    <div><b>👕 Футболки</b> — дизайнерская роспись одежды</div>
+                    <div><b>🧢 Роспись кепок</b> — трендовый кастом стиля</div>
+                    <div><b>🎀 Ободки</b> — сборка украшений для волос</div>
+                    <div><b>🕹️ Мини игра</b> — настолка своими руками</div>
+                    <div><b>⏳ Из песка</b> — создание цветных картин</div>
+                    <div><b>🎄 Ёлочные игрушки</b> — новогоднее волшебство</div>
+                    <div><b>🕯️ Свечи</b> — создание уютных свечей из воска</div>
+                    <div><b>🏺 Гипс</b> — отливка и декор классных фигурок</div>
+                    <div><b>🌳 Эко-арт</b> — роспись деревянных заготовок</div>
+                    <div><b>👑 Бьюти Бар</b> — блеск-тату, канекалоны, грим</div>
+                    <div><b>📦 Картоника</b> — постройки из мега-картона</div>
+                    <div><b>🧼 Бомбочки</b> — шипучие гейзеры для ванны</div>
+                </div>
+                <div style="height: 420px;">
+                    <img src="img/masterclass.jpg" class="img-block" alt="Мастер-класс">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="slide">
+        <img src="img/logo.png" class="img-logo-corner" alt="Logo">
+        <h2 class="slide-title">Стоимость программ и тимбилдингов</h2>
+        <div class="content-container">
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Наименование услуги</th>
+                            <th>5–10 чел</th>
+                            <th>10–20 чел</th>
+                            <th>20–30 чел</th>
+                            <th>30–50 чел</th>
+                            <th>50–80 чел</th>
+                            <th>80–100 чел</th>
+                            <th>100+ чел</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-section-title"><td colspan="8">АКТИВНЫЕ ПРОГРАММЫ</td></tr>
+                        <tr><td>Программа "Майнкрафт"</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr class="table-section-title"><td colspan="8">МИНИ-ТИМБИЛДИНГИ</td></tr>
+                        <tr><td>Эстафетный тимбилдинг</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr><td>Тимбилдинг "Игра в Кальмара"</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr class="table-section-title"><td colspan="8">КРАФТОВЫЕ ИГРЫ</td></tr>
+                        <tr><td colspan="8" style="text-align: center; font-weight: 700; color: #666;">ИНДИВИДУАЛЬНЫЙ РАСЧЕТ И КОМПЛЕКТАЦИЯ ПАКЕТОВ ИГР</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="slide">
+        <img src="img/logo.png" class="img-logo-corner" alt="Logo">
+        <h2 class="slide-title">Стоимость мастер-классов</h2>
+        <div class="content-container">
+            <div class="table-wrapper scrollable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Услуга (Мастер-класс)</th>
+                            <th>5–10</th>
+                            <th>10–20</th>
+                            <th>20–30</th>
+                            <th>30–50</th>
+                            <th>50–80</th>
+                            <th>80–100</th>
+                            <th>100+</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Слайм</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr><td>Оригами</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr><td>Фигурки из фетра</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr><td>Лава лампа</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr><td>Роспись футболок</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr><td>Изготовление ободков</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr><td>Роспись кепок</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr><td>Мини игра</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr><td>Картина песком</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr><td>Ёлочные игрушки</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr><td>Роспись свечей</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr><td>Бьюти Бар</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr><td>Аквагрим</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr><td>Гипсовые фигурки</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr><td>Деревянные фигурки</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr><td>Раскопки Дино</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr><td>Создание ФотоРамки</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr><td>Бомбочки для ванны</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                        <tr><td>Роспись Сладостей</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>_________</td><td>Индивидуально</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="margin-top: 15px; font-size: 14px; color: #666; font-style: italic; margin-bottom: 0;">* Все необходимые расходные материалы, скатерти и защитные фартуки включены в расчет стоимости.</p>
+        </div>
+    </div>
+
+
+    <div class="slide">
+        <img src="img/logo.png" class="img-logo-corner" alt="Logo">
+        <h2 class="slide-title">Что входит в стоимость</h2>
+        <div class="content-container">
+            <div class="grid-4-col" style="grid-template-rows: 1fr 1fr;">
+                <div class="card-premium" style="text-align: center; align-items: center; background: #fff;"><div class="card-icon"><i class="fa-solid fa-microphone-lines"></i></div><h3>ВЕДУЩИЙ</h3></div>
+                <div class="card-premium" style="text-align: center; align-items: center; background: #fff;"><div class="card-icon" style="color: var(--pink);"><i class="fa-solid fa-compact-disc"></i></div><h3>ПРОФЕССИОНАЛЬНЫЙ DJ</h3></div>
+                <div class="card-premium" style="text-align: center; align-items: center; background: #fff;"><div class="card-icon" style="color: var(--green);"><i class="fa-solid fa-volume-high"></i></div><h3>ЗВУКОВОЙ КОМПЛЕКС</h3></div>
+                <div class="card-premium" style="text-align: center; align-items: center; background: #fff;"><div class="card-icon" style="color: var(--orange);"><i class="fa-solid fa-box-open"></i></div><h3>ТЕМАТИЧЕСКИЙ РЕКВИЗИТ</h3></div>
+                <div class="card-premium" style="text-align: center; align-items: center; background: #fff;"><div class="card-icon"><i class="fa-solid fa-user-shield"></i></div><h3>КООРДИНАТОРЫ</h3></div>
+                <div class="card-premium" style="text-align: center; align-items: center; background: #fff;"><div class="card-icon" style="color: var(--pink);"><i class="fa-solid fa-scroll"></i></div><h3>ИНДИВИДУАЛЬНЫЙ СЦЕНАРИЙ</h3></div>
+                <div class="card-premium" style="text-align: center; align-items: center; background: #fff;"><div class="card-icon" style="color: var(--green);"><i class="fa-solid fa-id-card"></i></div><h3>БРАСЛЕТЫ</h3></div>
+                <div class="card-premium" style="text-align: center; align-items: center; background: #fff;"><div class="card-icon" style="color: var(--orange);"><i class="fa-solid fa-award"></i></div><h3>ДИПЛОМЫ УЧАСТНИКОВ</h3></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="slide" style="justify-content: center; align-items: center;">
+        <div class="content-container" style="align-items: center; text-align: center; justify-content: center;">
+            <h1 style="font-size: 60px; margin-bottom: 35px; line-height: 1.2;">Спасибо за<br><span style="color: var(--orange);">Внимание!</span></h1>
+            
+            <div style="background: var(--gray-light); padding: 35px 50px; border-radius: 30px; border: 1px solid #eee; width: 550px; text-align: left;">
+                <p style="margin-bottom: 15px;"><i class="fa-solid fa-phone" style="color: var(--blue); width: 30px;"></i> +7 (___) ___ __ __</p>
+                <p style="margin-bottom: 15px;"><i class="fa-brands fa-instagram" style="color: var(--pink); width: 30px;"></i> @element_kids_event</p>
+                <p style="margin-bottom: 0;"><i class="fa-brands fa-whatsapp" style="color: var(--green); width: 30px;"></i> Написать в WhatsApp</p>
+            </div>
+            
+            <img src="img/logo.png" style="width: 250px; margin-top: 45px;" alt="Logo Footer">
+        </div>
+    </div>
+
+</body>
+</html>
